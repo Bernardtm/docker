@@ -1,0 +1,11 @@
+version: "3.3"
+
+services:
+  publico:
+    image: nginx
+    # Mapeamento de porta entre host (esquerda) : container (direita)
+    # range de portas para o caso de scalar
+    ports:
+      - 80-85:80
+
+      # teste: docker-compose up -d --scale publico=4
